@@ -1,13 +1,19 @@
 import "./Button.css";
 function Button({ color, icon, text, path, size }) {
   return (
-    <button
-      className="btn"
-      style={{ backgroundColor: color, width: size.width, height: size.height }}
-    >
-      {icon}
-      {text}
-    </button>
+    <a href={path} target="_blank">
+      <button
+        className="btn"
+        style={{
+          backgroundColor: color,
+          width: size.width,
+          height: size.height,
+        }}
+      >
+        {icon}
+        {text}
+      </button>
+    </a>
   );
 }
 

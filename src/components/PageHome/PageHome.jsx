@@ -1,12 +1,14 @@
 import Hero from "../Hero/Hero";
+import ProjectGrid from "../ProjectGrid/ProjectGrid";
 import ProjectSlider from "../ProjectSlider/ProjectSlider";
 
-function PageHome() {
+function PageHome({ projects }) {
+  console.log(projects);
   return (
     <div className="page-home">
       <Hero />
       <hr />
-      <ProjectSlider />
+      <ProjectGrid projects={projects} />
     </div>
   );
 }

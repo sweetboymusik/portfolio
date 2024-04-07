@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "title": "/project_1",
+    "description": "A clone of the popular word game Wordle. Created with vanilla JavaScript.",
+    "icon": "FaSomethin",
+    "tags": [
+      { "label": "JS", "color": "blue" },
+      { "label": "JS", "color": "red" },
+      { "label": "JS", "color": "red" }
+    ],
+    "img": "https://images.unsplash.com/photo-1586810165616-94c631fc2f79?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "url": "https://github.com/sweetboymusik/trinkets",
+    "alt": "scabble pieces arranged to say 'THANK YOU'"
+  },
+  {
+    "id": 3,
+    "title": "/project_2",
+    "description": "Another this is a description",
+    "icon": "FaGame",
+    "tags": [
+      { "label": "JS", "color": "blue" },
+      { "label": "JS", "color": "red" },
+      { "label": "JS", "color": "red" }
+    ],
+    "img": "https://images.unsplash.com/photo-1586810165616-94c631fc2f79?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "url": "https://github.com/sweetboymusik/sprint1_feb2024",
+    "alt": "alt text"
+  }
+]

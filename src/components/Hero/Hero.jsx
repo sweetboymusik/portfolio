@@ -25,9 +25,25 @@ function Hero() {
         </p>
 
         <div className="hero-buttons">
-          <Button color="#D18A8E" icon={<FaGithub />} text="Github" />
-          <Button color="#7E8BBB" icon={<FaFigma />} text="Figma" />
-          <Button color="#E3C066" icon={<FaLinkedin />} text="Linkedin" />
+          <Button
+            color="#D18A8E"
+            icon={<FaGithub />}
+            text="Github"
+            size={{ width: "160px", height: "48px" }}
+            path="https://github.com/sweetboymusik"
+          />
+          <Button
+            color="#7E8BBB"
+            icon={<FaFigma />}
+            text="Figma"
+            size={{ width: "160px", height: "48px" }}
+          />
+          <Button
+            color="#E3C066"
+            icon={<FaLinkedin />}
+            text="Linkedin"
+            size={{ width: "160px", height: "48px" }}
+          />
         </div>
       </div>
       <div className="hero-right"></div>

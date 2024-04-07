@@ -1,0 +1,26 @@
+.hero {
+  display: flex;
+  position: relative;
+  margin: 32px;
+}
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  width: 50%;
+}
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-bg {
+  position: absolute;
+  width: 60%;
+  right: 0;
+
+  height: 520x;
+}

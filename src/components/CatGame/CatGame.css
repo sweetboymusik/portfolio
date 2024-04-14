@@ -1,5 +1,16 @@
-.game-window {
+.cat-game {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-top: 32px;
+  gap: 32px;
+}
+.cat-game header {
+  width: 920px;
+}
+
+.game-window {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -7,15 +18,15 @@
   color: #ddd;
 }
 .game-container {
-  width: 600px;
+  width: 920px;
   height: 500px;
   background-color: #333;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 32px;
   border-radius: 4px;
+  padding: 32px;
 }
 
 .game-character {
@@ -98,4 +109,13 @@
   gap: 16px;
   height: 40px;
   width: 300px;
+}
+
+.instructions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: justify;
+  gap: 32px;
+  width: 920px;
 }

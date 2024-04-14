@@ -17,7 +17,7 @@ function HomeProjects({ projects, onClick }) {
         <div className="home-projects-content">
           <p className="home-projects-para">
             View a catalog of my programming work/projects. See the slider below
-            for a preview of some of my favourites!
+            or click the button above to see more!
           </p>
         </div>
       </section>

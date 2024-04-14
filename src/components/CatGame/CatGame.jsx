@@ -119,13 +119,12 @@ function CatGame({ onLoad }) {
   }
 
   return (
-    <div>
+    <main className="cat-game">
+      <header>
+        <h1>/cat_game</h1>
+      </header>
       <div className="game-window" onLoad={onLoad}>
         <div className="game-container">
-          <header>
-            <h2>/cat_game</h2>
-          </header>
-
           <div className="game-score">
             <span className="score-item">
               Times Fed:
@@ -194,30 +193,38 @@ function CatGame({ onLoad }) {
           </div>
         </div>
       </div>
-      <p>
-        Feed your Cat! Your cat is always hungry, but they can also be extremely
-        picky about what they want to eat. Feed your cat the food they want, and
-        avoid food they don't want. The fun part? Your cat can't talk, so you
-        simply have to guess which food they want! Fun!
-      </p>
-      <p>
-        The timer at the bottom will constantly go down. When it runs out, your
-        cat will lose one of their 9 lives! Oh no! It will then fill back up and
-        repeat until you run out of lives.
-      </p>
-      <p>
-        Feeding them their favourite food will grant you one score and put 3
-        more seconds on the timer! Feeding them their hated food will cause them
-        to lose one of their lives. Feeding the other food (neither favourite or
-        hated) will grant you an extra second on the timer, but won't score you
-        a point. Clicking on foods will put that food on 'cooldown' for 3
-        seconds, making you unable to click on them.
-      </p>
-      <p>
-        Everytime you successfully feed them their favourite food, their
-        favourite and hated will be randomized to a (potentially) new food.
-      </p>
-    </div>
+
+      <span className="home-divider-container">
+        <hr className="home-divider-small" />
+      </span>
+
+      <div className="instructions">
+        <h1>/instructions</h1>
+        <p>
+          Feed your cat! Your cat is always hungry, but they can also be
+          extremely picky about what they want to eat. Feed your cat the food
+          they want, and avoid food they don't want. The fun part? Your cat
+          can't talk, so you simply have to guess which food they want! Fun!
+        </p>
+        <p>
+          The timer at the bottom will constantly go down. When it runs out,
+          your cat will lose one of their 9 lives! Oh no! It will then fill back
+          up and repeat until you run out of lives.
+        </p>
+        <p>
+          Feeding them their favourite food will grant you one score and put 3
+          more seconds on the timer! Feeding them their hated food will cause
+          them to lose one of their lives. Feeding the other food (neither
+          favourite or hated) will grant you an extra second on the timer, but
+          won't score you a point. Clicking on foods will put that food on
+          'cooldown' for 3 seconds, making you unable to click on them.
+        </p>
+        <p>
+          Everytime you successfully feed them their favourite food, their
+          favourite and hated will be randomized to a (potentially) new food.
+        </p>
+      </div>
+    </main>
   );
 }
 

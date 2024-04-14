@@ -40,16 +40,29 @@ function ProjectSlider({ projects }) {
     }, 500);
   }
 
+  function getPrevCards() {
+    setStyle({ opacity: "0", transform: "translateX(750px)" });
+    setTimeout(() => {
+      setStyle({ opacity: "0", transform: "translateX(-750px)" });
+    }, 230);
+
+    setTimeout(() => {
+      changeProjects();
+      setStyle({ opacity: "100%", transform: "translateX(0px)" });
+    }, 500);
+  }
+
   return (
     <div className="project-slider">
-      <button onClick={getNextCards} className="project-next">
+      <button onClick={getPrevCards} className="project-next">
         <FaChevronLeft className="" />
       </button>
 
       <div className="project-slider-mask">
         <div className="project-slider-content" style={style}>
-          {currentProj.map((project) => (
+          {currentProj.map((project, index) => (
             <CardSmall
+              key={index}
               title={project.title}
               icon={project.icon}
               tags={project.tags}

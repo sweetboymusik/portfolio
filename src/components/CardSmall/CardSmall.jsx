@@ -14,8 +14,8 @@ function CardSmall({ title, icon, tags, desc }) {
 
       <div className="card-section">
         <div className="card-tags">
-          {tags.map((tag) => (
-            <CardTag label={tag.label} color={tag.color} />
+          {tags.map((tag, index) => (
+            <CardTag key={index} label={tag.label} color={tag.color} />
           ))}
         </div>
         <Button

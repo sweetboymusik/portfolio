@@ -13,8 +13,11 @@ import canRed from "../../assets/cat_game/food3.png";
 
 import { useEffect, useState } from "react";
 function CatGame({ onLoad }) {
+  let [firstPlay, setFirstPlay] = useState(true);
+  let [playing, setPlaying] = useState(false);
   let [currentTime, setCurrentTime] = useState(10000);
   let [timesFed, setTimesFed] = useState(0);
+  let [lastScore, setLastScore] = useState(0);
   let [lives, setLives] = useState(9);
   let [image, setImage] = useState(peace);
   let [color, setColor] = useState("#7E8BBB");
@@ -22,6 +25,7 @@ function CatGame({ onLoad }) {
   let [hatedFood, setHatedFood] = useState();
   let [numStyle, setNumStyle] = useState(12);
   let [numStyle2, setNumStyle2] = useState(12);
+  let [message, setMessage] = useState();
 
   function randomizeFood() {
     let array = ["btn-yellow", "btn-blue", "btn-red"];
@@ -35,24 +39,32 @@ function CatGame({ onLoad }) {
     if (!e.target.disabled) {
       e.target.disabled = true;
       if (e.target.id === wantedFood) {
-        console.log("i want this one!");
         setTimesFed(timesFed + 1);
+        randomizeFood();
         setCurrentTime(Math.min(currentTime + 3000, 10000));
         numberChange();
-        randomizeFood();
+        changeMessage("Great!", love);
       } else if (e.target.id === hatedFood) {
-        setLives(lives - 1);
+        loseLife(1);
         numberChange2();
-        console.log("ewwww");
+        changeMessage("Ewww!");
       } else {
-        console.log("okay");
         setCurrentTime(Math.min(currentTime + 1000, 10000));
+        changeMessage("Okay...");
       }
 
       setTimeout(() => {
         e.target.disabled = false;
       }, 3000);
     }
+  }
+
+  function changeMessage(message, image) {
+    setMessage(message);
+    setImage(image);
+    setTimeout(() => {
+      setMessage("");
+    }, 600);
   }
 
   function numberChange() {
@@ -88,15 +100,26 @@ function CatGame({ onLoad }) {
     loseLife();
   }, [currentTime]);
 
-  function loseLife() {
-    if (currentTime === 0) {
+  function loseLife(flag) {
+    if (currentTime === 0 || flag) {
       if (lives > 1) {
         setLives(lives - 1);
         numberChange2();
-        setCurrentTime(10000);
+        if (!flag) setCurrentTime(10000);
       } else {
+        reset();
       }
     }
+  }
+
+  function reset() {
+    if (firstPlay) setFirstPlay(false);
+    setLastScore(timesFed);
+    setPlaying(false);
+    setLives(9);
+    setTimesFed(0);
+    randomizeFood();
+    setCurrentTime(10000);
   }
 
   function switchImgColor() {
@@ -124,76 +147,99 @@ function CatGame({ onLoad }) {
         <header>
           <h1>/cat_game</h1>
         </header>
-        <div className="game-window" onLoad={onLoad}>
-          <div className="game-container">
-            <div className="game-score">
-              <span className="score-item">
-                Score:
-                <p
-                  style={{
-                    fontSize: `${numStyle}pt`,
-                    transition: `all 0.1s ease`,
-                  }}
-                >
-                  {timesFed}
-                </p>
-              </span>
-              <span className="score-item">
-                Lives:
-                <p
-                  style={{
-                    fontSize: `${numStyle2}pt`,
-                    transition: `all 0.1s ease`,
-                  }}
-                >
-                  {lives}
-                </p>
-              </span>
-            </div>
 
-            <p>Choose Food</p>
-            <div className="game-buttons">
-              <button
-                onClick={(e) => {
-                  onClick(e);
-                }}
-                className="game-button"
-                id="btn-yellow"
-              >
-                <img src={canYellow} alt="yellow food can" />
-              </button>
-              <button
-                onClick={(e) => {
-                  onClick(e);
-                }}
-                className="game-button"
-                id="btn-blue"
-              >
-                <img src={canBlue} alt="blue food can" />
-              </button>
-              <button
-                onClick={(e) => {
-                  onClick(e);
-                }}
-                className="game-button"
-                id="btn-red"
-              >
-                <img src={canRed} alt="red food can" />
-              </button>
-            </div>
-            <img className="game-character" src={image} alt="cute cat icon" />
-            <div className="timer">
-              <hr className="timer-base" />
-              <hr
-                className="timer-progress"
-                style={{
-                  width: `${currentTime / 20}px`,
-                  backgroundColor: `${color}`,
-                }}
-              />
+        {playing ? (
+          <div className="game-window" onLoad={onLoad}>
+            <div className="game-container">
+              <div className="game-score">
+                <span className="score-item">
+                  Score:
+                  <p
+                    style={{
+                      fontSize: `${numStyle}pt`,
+                      transition: `all 0.1s ease`,
+                    }}
+                  >
+                    {timesFed}
+                  </p>
+                </span>
+                <span className="score-item">
+                  Lives:
+                  <p
+                    style={{
+                      fontSize: `${numStyle2}pt`,
+                      transition: `all 0.1s ease`,
+                    }}
+                  >
+                    {lives}
+                  </p>
+                </span>
+              </div>
+
+              {message ? (
+                <p className="game-message">{message}</p>
+              ) : (
+                <p className="game-message">&nbsp;</p>
+              )}
+              <div className="game-buttons">
+                <button
+                  onClick={(e) => {
+                    onClick(e);
+                  }}
+                  className="game-button"
+                  id="btn-yellow"
+                >
+                  <img src={canYellow} alt="yellow food can" />
+                </button>
+                <button
+                  onClick={(e) => {
+                    onClick(e);
+                  }}
+                  className="game-button"
+                  id="btn-blue"
+                >
+                  <img src={canBlue} alt="blue food can" />
+                </button>
+                <button
+                  onClick={(e) => {
+                    onClick(e);
+                  }}
+                  className="game-button"
+                  id="btn-red"
+                >
+                  <img src={canRed} alt="red food can" />
+                </button>
+              </div>
+              <img className="game-character" src={image} alt="cute cat icon" />
+              <div className="timer">
+                <hr className="timer-base" />
+                <hr
+                  className="timer-progress"
+                  style={{
+                    width: `${currentTime / 20}px`,
+                    backgroundColor: `${color}`,
+                  }}
+                />
+              </div>
             </div>
           </div>
-        </div>
+        ) : (
+          <section className="game-window">
+            <div className="game-container">
+              <p>{firstPlay ? " " : "Game Over!"}&nbsp;</p>
+              <img className="game-character" src={happy} alt="cute cat icon" />
+              <button
+                onClick={() => {
+                  setPlaying(true);
+                }}
+                className="game-play-button"
+              >
+                Play
+              </button>
+              <p>Last score: {lastScore}</p>
+            </div>
+          </section>
+        )}
       </section>
 
       <span className="home-divider-container">

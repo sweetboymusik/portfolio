@@ -119,3 +119,16 @@
   gap: 32px;
   width: 920px;
 }
+
+.game-message {
+  font-size: 24px;
+}
+
+.game-play-button {
+  border: none;
+  background-color: #e3c066;
+  height: 48px;
+  width: 160px;
+  border-radius: 4px;
+  font-size: 24px;
+}

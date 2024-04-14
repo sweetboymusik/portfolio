@@ -19,7 +19,7 @@ import {
 import AboutEduCard from "../AboutEduCard/AboutEduCard";
 import AboutWorkCard from "../AboutWorkCard/AboutWorkCard";
 
-function PageAbout() {
+function PageAbout({ onClick }) {
   return (
     <main className="about-main">
       <section className="page-section">
@@ -101,7 +101,7 @@ function PageAbout() {
 
         <p>
           Want more cats? Play my&nbsp;
-          <Link className="about-page-link" to="/cat_game">
+          <Link onClick={onClick} className="about-page-link" to="/cat_game">
             cat game!
           </Link>
         </p>

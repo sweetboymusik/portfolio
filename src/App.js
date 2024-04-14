@@ -149,16 +149,13 @@ function App() {
               />
             }
           />
-          <Route path="/about" element={<PageAbout onLoad={scrollToTop} />} />
+          <Route path="/about" element={<PageAbout onClick={scrollToTop} />} />
           <Route
             path="/projects"
-            element={<PageProjects projects={projects} onLoad={scrollToTop} />}
+            element={<PageProjects projects={projects} />}
           />
-          <Route
-            path="/contact"
-            element={<PageContact onLoad={scrollToTop} />}
-          />
-          <Route path="/cat_game" element={<CatGame onLoad={scrollToTop} />} />
+          <Route path="/contact" element={<PageContact />} />
+          <Route path="/cat_game" element={<CatGame />} />
         </Routes>
       </div>
 

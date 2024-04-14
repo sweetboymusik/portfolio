@@ -29,7 +29,7 @@
   },
   {
     "id": 3,
-    "title": "/company_management_system",
+    "title": "/company_management_CLI",
     "description": "Mock company management CLI system.  Group project.",
     "icon": "FaGame",
     "tags": [{ "label": "Python", "color": "#7D8BBB" }],

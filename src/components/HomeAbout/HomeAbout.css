@@ -8,6 +8,10 @@
   color: #333;
 }
 
+.home-about-link {
+  text-decoration: none;
+}
+
 .home-about-top {
   display: flex;
   justify-content: center;
@@ -20,12 +24,12 @@
   height: 100px;
   width: 300px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   border-radius: 4px;
   box-shadow: 8px 8px 0px #d18a8eaa;
   color: #ddd;
+  gap: 32px;
 }
 
 .home-about-content {

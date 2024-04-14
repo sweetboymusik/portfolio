@@ -1,5 +1,16 @@
 .Footer {
-  position: absolute;
   height: 48px;
   background-color: #ddd;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 32px;
+}
+
+.footer-container {
+  width: 920px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -15,10 +15,15 @@ import CatGame from "./components/CatGame/CatGame";
 function App() {
   let [projects, setProjects] = useState();
   let [about, setAbout] = useState();
-  let [navColor, setNavColor] = useState("#ddd");
+  let [navColor, setNavColor] = useState("#E3C066");
 
   useEffect(() => setProjects(projectsData), []);
   useEffect(() => setAbout(aboutData), []);
+
+  function scrollToTop() {
+    console.log("scrolling");
+    window.scroll(0, 0);
+  }
 
   return (
     <Router>
@@ -26,14 +31,23 @@ function App() {
 
       <div className="page-content">
         <Routes>
-          <Route path="/home" element={<PageHome projects={projects} />} />
-          <Route path="/about" element={<PageAbout content={about} />} />
+          <Route
+            path="/home"
+            element={<PageHome projects={projects} onClick={scrollToTop} />}
+          />
+          <Route
+            path="/about"
+            element={<PageAbout content={about} onLoad={scrollToTop} />}
+          />
           <Route
             path="/projects"
-            element={<PageProjects projects={projects} />}
+            element={<PageProjects projects={projects} onLoad={scrollToTop} />}
           />
-          <Route path="/contact" element={<PageContact />} />
-          <Route path="/cat_game" element={<CatGame />} />
+          <Route
+            path="/contact"
+            element={<PageContact onLoad={scrollToTop} />}
+          />
+          <Route path="/cat_game" element={<CatGame onLoad={scrollToTop} />} />
         </Routes>
       </div>
 

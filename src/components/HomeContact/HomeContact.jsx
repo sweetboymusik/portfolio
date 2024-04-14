@@ -1,12 +1,18 @@
 import "./HomeContact.css";
+import { Link } from "react-router-dom";
+import { FaArrowAltCircleRight } from "react-icons/fa";
 import { FaInbox, FaMessage, FaLink } from "react-icons/fa6";
 
-function HomeContact() {
+function HomeContact({ onClick }) {
   return (
     <section className="home-contact">
-      <div className="home-contact-title text-medium">
-        <h3>/contact</h3>
-      </div>
+      <Link className="home-contact-link" to="/contact" onClick={onClick}>
+        <div className="home-contact-title text-medium">
+          <h3>/contact</h3>
+          <FaArrowAltCircleRight />
+        </div>
+      </Link>
+
       <div className="home-contact-top">
         <div className="home-contact-content">
           <p className="home-contact-para">

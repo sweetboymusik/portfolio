@@ -3,9 +3,55 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 32px;
+  margin-top: 32px;
 }
 
 .projects-project-grid {
   width: 920px;
-  margin: 48px;
+}
+
+.page-projects header {
+  width: 920px;
+}
+.page-projects h1 {
+  align-self: start;
+}
+
+.projects-featured {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  width: 920px;
+  background-color: #ddd;
+  border-radius: 4px;
+  padding: 24px;
+}
+
+.projects-featured h2 {
+  align-self: start;
+}
+
+.project-video {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.project-big-tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  background-color: #7e8bbb;
+  height: 24px;
+  font-size: 12px;
+  border-radius: 4px;
+}
+
+.featured-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }

@@ -8,7 +8,6 @@ function CardSmall({ title, icon, tags, desc }) {
     <div className="card-small">
       <div className="card-section card-top">
         <h3>{title}</h3>
-        <span className="card-icon">{icon}</span>
       </div>
 
       <p>{desc}</p>

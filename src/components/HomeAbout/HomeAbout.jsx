@@ -1,12 +1,17 @@
 import "./HomeAbout.css";
+import { Link } from "react-router-dom";
 import { FaAddressCard, FaLaptopCode, FaMusic, FaCat } from "react-icons/fa6";
+import { FaArrowAltCircleRight } from "react-icons/fa";
 
-function HomeAbout() {
+function HomeAbout({ onClick }) {
   return (
     <section className="home-about">
-      <div className="home-about-title text-medium">
-        <h3>/about</h3>
-      </div>
+      <Link className="home-about-link" to="/about" onClick={onClick}>
+        <div className="home-about-title text-medium">
+          <h3>/about</h3>
+          <FaArrowAltCircleRight />
+        </div>
+      </Link>
       <div className="home-about-top">
         <div className="home-about-content">
           <p className="home-about-para">

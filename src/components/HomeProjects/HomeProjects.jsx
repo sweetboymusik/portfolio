@@ -1,14 +1,18 @@
 import "./HomeProjects.css";
-import { FaFolderOpen } from "react-icons/fa6";
+import { Link } from "react-router-dom";
+import { FaArrowAltCircleRight } from "react-icons/fa";
 import ProjectSlider from "../ProjectSlider/ProjectSlider";
 
-function HomeProjects({ projects }) {
+function HomeProjects({ projects, onClick }) {
   return (
     <section className="home-projects">
       <section className="home-projects-top">
-        <div className="home-projects-title text-medium">
-          <h3>/projects</h3>
-        </div>
+        <Link className="project-link" to="/projects" onClick={onClick}>
+          <div className="home-projects-title text-medium">
+            <h3>/projects</h3>
+            <FaArrowAltCircleRight />
+          </div>
+        </Link>
 
         <div className="home-projects-content">
           <p className="home-projects-para">

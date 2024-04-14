@@ -15,11 +15,17 @@ function PageContact() {
           title="message"
           content={<ContactForm />}
         />
+        <span className="home-divider-container">
+          <hr className="home-divider-small" />
+        </span>
         <ContactSection
           icon={<FaLink />}
           title="links"
           content={<ContactLinks />}
         />
+        <span className="home-divider-container">
+          <hr className="home-divider-small" />
+        </span>
         <ContactSection
           icon={<FaMessage />}
           title="contact_information"

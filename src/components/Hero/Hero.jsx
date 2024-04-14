@@ -40,18 +40,21 @@ function Hero() {
             icon={<FaGithub />}
             text="Github"
             size={{ width: "200px", height: "48px" }}
+            path="https://github.com/sweetboymusik"
           />
           <Button
             color="#7E8BBB"
             icon={<FaFigma />}
             text="Figma"
             size={{ width: "200px", height: "48px" }}
+            path="https://www.figma.com/@elliottbutt"
           />
           <Button
             color="#E3C066"
             icon={<FaLinkedin />}
             text="Linkedin"
             size={{ width: "200px", height: "48px" }}
+            path="https://www.figma.com/@elliottbutt"
           />
         </div>
       </div>

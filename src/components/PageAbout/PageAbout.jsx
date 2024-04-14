@@ -20,7 +20,7 @@ import {
 import AboutEduCard from "../AboutEduCard/AboutEduCard";
 import AboutWorkCard from "../AboutWorkCard/AboutWorkCard";
 
-function PageAbout({ content }) {
+function PageAbout() {
   return (
     <main className="about-main">
       <section className="about-text">
@@ -54,6 +54,10 @@ function PageAbout({ content }) {
         </div>
       </section>
 
+      <span className="home-divider-container">
+        <hr className="home-divider-small" />
+      </span>
+
       <section className="about-text">
         <h2>/cats</h2>
         <p>Here are my cats. =^_^=</p>
@@ -63,6 +67,10 @@ function PageAbout({ content }) {
           <img className="cat" src={puss} alt="My cat Puss" />
         </div>
       </section>
+
+      <span className="home-divider-container">
+        <hr className="home-divider-small" />
+      </span>
 
       <section className="about-text about-resume">
         <header>

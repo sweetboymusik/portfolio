@@ -4,7 +4,7 @@ import HomeAbout from "../HomeAbout/HomeAbout";
 import HomeContact from "../HomeContact/HomeContact";
 import HomeProjects from "../HomeProjects/HomeProjects";
 
-function PageHome({ projects }) {
+function PageHome({ projects, onClick }) {
   console.log(projects);
   return (
     <div className="page-home">
@@ -13,15 +13,15 @@ function PageHome({ projects }) {
       <hr className="home-divider" />
 
       <div className="home-sections">
-        <HomeAbout />
+        <HomeAbout onClick={onClick} />
         <span className="home-divider-container">
           <hr className="home-divider-small" />
         </span>
-        <HomeProjects projects={projects} />
+        <HomeProjects projects={projects} onClick={onClick} />
         <span className="home-divider-container">
           <hr className="home-divider-small" />
         </span>
-        <HomeContact />
+        <HomeContact onClick={onClick} />
       </div>
     </div>
   );

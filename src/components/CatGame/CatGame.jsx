@@ -12,7 +12,7 @@ import canBlue from "../../assets/cat_game/food2.png";
 import canRed from "../../assets/cat_game/food3.png";
 
 import { useEffect, useState } from "react";
-function CatGame() {
+function CatGame({ onLoad }) {
   let [currentTime, setCurrentTime] = useState(10000);
   let [timesFed, setTimesFed] = useState(0);
   let [lives, setLives] = useState(9);
@@ -120,7 +120,7 @@ function CatGame() {
 
   return (
     <div>
-      <div className="game-window">
+      <div className="game-window" onLoad={onLoad}>
         <div className="game-container">
           <header>
             <h2>/cat_game</h2>

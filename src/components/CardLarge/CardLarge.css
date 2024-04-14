@@ -26,19 +26,6 @@
   font-size: 14pt;
 }
 
-.card-middle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.card-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 24pt;
-}
-
 .card-tag {
   font-size: 10pt;
   width: 56px;

@@ -2,14 +2,13 @@ import "./CardLarge.css";
 import CardTag from "../CardTag/CardTag";
 import Button from "../Button/Button";
 import { FaGithub } from "react-icons/fa6";
-import { MdOutlineWeb } from "react-icons/md";
 
 function CardLarge({ project }) {
   return (
     <div className="card-large">
-      <div className="card-section card-top">
+      <header className="card-section card-top">
         <h3>{project.title}</h3>
-      </div>
+      </header>
 
       <div className="card-middle">
         <img

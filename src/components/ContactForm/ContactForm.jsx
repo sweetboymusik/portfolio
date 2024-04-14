@@ -38,6 +38,7 @@ function ContactForm() {
           className="contact-form-message"
         ></textarea>
       </div>
+
       <Button text={"Send"} size={{ width: "100%" }} icon={<FaPaperPlane />} />
     </form>
   );

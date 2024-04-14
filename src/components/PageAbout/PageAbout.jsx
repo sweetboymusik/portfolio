@@ -1,5 +1,4 @@
 import "./PageAbout.css";
-import Button from "../Button/Button";
 import { Link } from "react-router-dom";
 import { SiVisualstudiocode } from "react-icons/si";
 import { SiVim } from "react-icons/si";
@@ -7,7 +6,6 @@ import { SiNeovim } from "react-icons/si";
 import sherlock from "../../assets/sherlock.jpg";
 import watson from "../../assets/watson.jpg";
 import puss from "../../assets/puss.jpg";
-import { FaArrowAltCircleRight } from "react-icons/fa";
 
 import {
   FaReact,

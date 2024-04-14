@@ -5,7 +5,6 @@ import {
   FaXTwitter,
   FaInstagram,
   FaFacebook,
-  FaLink,
 } from "react-icons/fa6";
 
 import ContactLink from "../ContactLink/ContactLink";

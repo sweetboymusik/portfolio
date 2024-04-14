@@ -1,20 +1,13 @@
 import "./Hero.css";
 import Button from "../Button/Button";
 import heroImg from "../../assets/hero-img.png";
-
-import {
-  FaGithub,
-  FaFigma,
-  FaLinkedin,
-  FaGit,
-  FaDownload,
-} from "react-icons/fa6";
+import { FaGithub, FaFigma, FaLinkedin } from "react-icons/fa6";
 
 function Hero() {
   return (
-    <div className="hero">
+    <section className="hero">
       <div className="hero-container">
-        <div className="hero-left">
+        <div className="hero-top">
           <div className="hero-content">
             <div className="hero-title">
               <h1 className="text-large">
@@ -34,6 +27,7 @@ function Hero() {
           </div>
           <img className="hero-img" src={heroImg} alt="" />
         </div>
+
         <div className="hero-buttons">
           <Button
             color="#D18A8E"
@@ -58,7 +52,7 @@ function Hero() {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

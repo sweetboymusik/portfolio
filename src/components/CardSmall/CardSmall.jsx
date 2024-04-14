@@ -6,9 +6,9 @@ import Button from "../Button/Button";
 function CardSmall({ title, icon, tags, desc }) {
   return (
     <div className="card-small">
-      <div className="card-section card-top">
+      <header className="card-section card-top">
         <h3>{title}</h3>
-      </div>
+      </header>
 
       <p>{desc}</p>
 

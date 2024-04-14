@@ -1,6 +1,6 @@
 function ContactSection({ icon, title, content }) {
   return (
-    <section className="contact-section">
+    <section className="page-section">
       <header className="contact-section-header">
         <h1>/{title}</h1>
       </header>

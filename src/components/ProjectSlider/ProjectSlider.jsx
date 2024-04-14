@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 
 function ProjectSlider({ projects }) {
   let [slide, setSlide] = useState(false);
-  let [nextProj, setNextProj] = useState(projects);
+  let [nextProj, setNextProj] = useState([...projects]);
   let [currentProj, setCurrentProj] = useState([]);
   let [index, setIndex] = useState();
   let [style, setStyle] = useState({

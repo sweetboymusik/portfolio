@@ -24,8 +24,9 @@ import AboutWorkCard from "../AboutWorkCard/AboutWorkCard";
 function PageAbout() {
   return (
     <main className="about-main">
-      <section className="about-text">
+      <section className="page-section">
         <h1>/background</h1>
+
         <div className="about-article">
           <p>
             Starting with a music degree from Memorial University of
@@ -59,13 +60,45 @@ function PageAbout() {
         <hr className="home-divider-small" />
       </span>
 
-      <section className="about-text">
+      <section className="page-section">
         <h2>/cats</h2>
+
         <p>Here are my cats. =^_^=</p>
+
         <div className="cats">
-          <img className="cat" src={sherlock} alt="My cat Sherlock" />
-          <img className="cat" src={watson} alt="My cat Watson" />
-          <img className="cat" src={puss} alt="My cat Puss" />
+          <span className="cat-card">
+            <img
+              id="sherlock-pic"
+              className="cat"
+              src={sherlock}
+              alt="My cat Sherlock"
+            />
+
+            <p className="cat-name" id="sherlock">
+              Sherlock
+            </p>
+          </span>
+
+          <span className="cat-card">
+            <img
+              id="watson-pic"
+              className="cat"
+              src={watson}
+              alt="My cat Watson"
+            />
+
+            <p className="cat-name" id="watson">
+              Watson
+            </p>
+          </span>
+
+          <span className="cat-card">
+            <img id="puss-pic" className="cat" src={puss} alt="My cat Puss" />
+
+            <p className="cat-name" id="puss">
+              Puss
+            </p>
+          </span>
         </div>
 
         <p>
@@ -80,11 +113,13 @@ function PageAbout() {
         <hr className="home-divider-small" />
       </span>
 
-      <section className="about-text about-resume">
+      <section className="page-section about-resume">
         <header>
           <h1>/resume</h1>
         </header>
-        <h3># technology</h3>
+
+        <h2># technology</h2>
+
         <div className="resume-skills">
           <ul>
             <li>
@@ -129,7 +164,8 @@ function PageAbout() {
             </li>
           </ul>
         </div>
-        <h3># education</h3>
+
+        <h2># education</h2>
         <div className="resume-edu">
           <AboutEduCard
             program={"Bachelor of Music"}
@@ -142,7 +178,8 @@ function PageAbout() {
             date={"Sept 2023 -  Dec 2024"}
           />
         </div>
-        <h3># work</h3>
+
+        <h2># work</h2>
         <div className="resume-work">
           <AboutWorkCard
             position={"Music Composer"}

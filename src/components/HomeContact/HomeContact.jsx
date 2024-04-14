@@ -5,7 +5,7 @@ import { FaInbox, FaMessage, FaLink } from "react-icons/fa6";
 
 function HomeContact({ onClick }) {
   return (
-    <section className="home-contact">
+    <section className="page-section">
       <Link className="home-contact-link" to="/contact" onClick={onClick}>
         <div className="home-contact-title text-medium">
           <h3>/contact</h3>
@@ -13,29 +13,27 @@ function HomeContact({ onClick }) {
         </div>
       </Link>
 
-      <div className="home-contact-top">
-        <div className="home-contact-content">
-          <p className="home-contact-para">
-            Send me a message, see my contact info, and find all of my social
-            links. All in one convient place!
-          </p>
-        </div>
-      </div>
+      <div className="home-section-centered">
+        <p className="home-contact-para">
+          Send me a message, see my contact info, and find all of my social
+          links. All in one convenient place!
+        </p>
 
-      <div className="home-contact-item-container">
-        <div className="home-contact-item">
-          <FaInbox className="home-contact-icon" />
-          <p>Send a message</p>
-        </div>
+        <div className="home-icon-container">
+          <div className="home-icon-card">
+            <FaInbox className="home-icon" />
+            <p>Send a message</p>
+          </div>
 
-        <div className="home-contact-item">
-          <FaMessage className="home-contact-icon" />
-          <p>Contact Info</p>
-        </div>
+          <div className="home-icon-card">
+            <FaMessage className="home-icon" />
+            <p>Contact Info</p>
+          </div>
 
-        <div className="home-contact-item">
-          <FaLink className="home-contact-icon" />
-          <p>Links</p>
+          <div className="home-icon-card">
+            <FaLink className="home-icon" />
+            <p>Links</p>
+          </div>
         </div>
       </div>
     </section>

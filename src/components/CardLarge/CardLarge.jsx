@@ -23,8 +23,8 @@ function CardLarge({ project }) {
 
       <div className="card-section">
         <div className="card-tags">
-          {project.tags.map((tag) => (
-            <CardTag label={tag.label} color={tag.color} />
+          {project.tags.map((tag, index) => (
+            <CardTag key={index} label={tag.label} color={tag.color} />
           ))}
         </div>
 

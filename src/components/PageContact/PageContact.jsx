@@ -9,29 +9,31 @@ import ContactInfo from "../ContactInfo/ContactInfo";
 function PageContact() {
   return (
     <main className="page-contact">
-      <div className="contact-content">
-        <ContactSection
-          icon={<FaInbox />}
-          title="message"
-          content={<ContactForm />}
-        />
-        <span className="home-divider-container">
-          <hr className="home-divider-small" />
-        </span>
-        <ContactSection
-          icon={<FaLink />}
-          title="links"
-          content={<ContactLinks />}
-        />
-        <span className="home-divider-container">
-          <hr className="home-divider-small" />
-        </span>
-        <ContactSection
-          icon={<FaMessage />}
-          title="contact_information"
-          content={<ContactInfo />}
-        />
-      </div>
+      <ContactSection
+        icon={<FaInbox />}
+        title="message"
+        content={<ContactForm />}
+      />
+
+      <span className="home-divider-container">
+        <hr className="home-divider-small" />
+      </span>
+
+      <ContactSection
+        icon={<FaLink />}
+        title="links"
+        content={<ContactLinks />}
+      />
+
+      <span className="home-divider-container">
+        <hr className="home-divider-small" />
+      </span>
+
+      <ContactSection
+        icon={<FaMessage />}
+        title="contact_information"
+        content={<ContactInfo />}
+      />
     </main>
   );
 }

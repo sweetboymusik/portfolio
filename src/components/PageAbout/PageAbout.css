@@ -7,19 +7,6 @@
   gap: 72px;
 }
 
-.about-text {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  font-size: 14pt;
-  width: 920px;
-}
-
-.about-text header {
-  display: flex;
-  justify-content: space-between;
-}
-
 .about-article {
   display: flex;
   flex-direction: column;
@@ -61,7 +48,8 @@
   width: 160px;
 }
 
-.about-resume h3 {
+.about-resume h2 {
+  font-size: 14pt;
   background-color: #333;
   color: #eee;
   padding: 4px 8px;
@@ -74,12 +62,51 @@
 }
 
 .cat {
-  height: 280px;
-  width: 280px;
+  height: 200px;
+  width: 300px;
   object-fit: cover;
   border-radius: 4px;
+  object-position: center top;
 }
 
 .about-page-link {
   color: #d18a8e;
+}
+
+.cat-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.cat-name {
+  width: 100%;
+  border-radius: 4px;
+  padding: 4px;
+  text-align: center;
+  font-size: 10pt;
+}
+
+#sherlock-pic {
+  object-position: center -120px;
+}
+#watson-pic {
+  object-position: center -60px;
+}
+#puss-pic {
+  object-position: center -20px;
+}
+
+#sherlock {
+  background-color: #7e8bbb;
+}
+
+#watson {
+  background-color: #e3c066;
+}
+
+#puss {
+  background-color: #d18a8e;
 }

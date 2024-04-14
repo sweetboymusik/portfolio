@@ -3,7 +3,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 100px;
+  gap: 72px;
+  margin-top: 32px;
 }
 
 .home-divider {
@@ -17,7 +18,7 @@
 .home-sections {
   display: flex;
   flex-direction: column;
-  gap: 100px;
+  gap: 64px;
 }
 
 .home-divider-container {

@@ -28,8 +28,8 @@ function Hero() {
             </div>
 
             <p className="text-small text-light hero-paragraph">
-              Currently studying software development at Keyin College. Focusing
-              on web development. Based in Newfoundland, Canada.
+              Currently studying software development at Keyin College. Based in
+              Newfoundland, Canada.
             </p>
           </div>
           <img className="hero-img" src={heroImg} alt="" />

@@ -3,34 +3,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.contact-content {
-  display: flex;
-  flex-direction: column;
-  gap: 88px;
-  width: 920px;
+  gap: 72px;
   margin-top: 32px;
-}
-
-.contact-section {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-}
-
-.contact-section-header {
-  display: flex;
-  align-items: center;
-}
-
-.contact-section-icon {
-  font-size: 56px;
-  width: 64px;
-}
-
-.contact-section-content {
-  text-align: justify;
 }
 
 .contact-form {
@@ -96,6 +70,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  gap: 32px;
 }
 
 .contact-info-item {
@@ -104,7 +79,7 @@
   align-items: center;
   gap: 8px;
   background-color: #ddd;
-  width: 300px;
+  width: 100%;
   padding: 32px;
   border-radius: 4px;
 }

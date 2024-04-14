@@ -8,7 +8,6 @@
 
 .hero-container {
   width: 920px;
-  margin-top: 48px;
   display: flex;
   flex-direction: column;
   gap: 48px;

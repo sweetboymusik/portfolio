@@ -120,79 +120,81 @@ function CatGame({ onLoad }) {
 
   return (
     <main className="cat-game">
-      <header>
-        <h1>/cat_game</h1>
-      </header>
-      <div className="game-window" onLoad={onLoad}>
-        <div className="game-container">
-          <div className="game-score">
-            <span className="score-item">
-              Times Fed:
-              <p
-                style={{
-                  fontSize: `${numStyle}pt`,
-                  transition: `all 0.1s ease`,
-                }}
-              >
-                {timesFed}
-              </p>
-            </span>
-            <span className="score-item">
-              Lives:
-              <p
-                style={{
-                  fontSize: `${numStyle2}pt`,
-                  transition: `all 0.1s ease`,
-                }}
-              >
-                {lives}
-              </p>
-            </span>
-          </div>
+      <section className="page-section">
+        <header>
+          <h1>/cat_game</h1>
+        </header>
+        <div className="game-window" onLoad={onLoad}>
+          <div className="game-container">
+            <div className="game-score">
+              <span className="score-item">
+                Score:
+                <p
+                  style={{
+                    fontSize: `${numStyle}pt`,
+                    transition: `all 0.1s ease`,
+                  }}
+                >
+                  {timesFed}
+                </p>
+              </span>
+              <span className="score-item">
+                Lives:
+                <p
+                  style={{
+                    fontSize: `${numStyle2}pt`,
+                    transition: `all 0.1s ease`,
+                  }}
+                >
+                  {lives}
+                </p>
+              </span>
+            </div>
 
-          <p>Choose Food</p>
-          <div className="game-buttons">
-            <button
-              onClick={(e) => {
-                onClick(e);
-              }}
-              className="game-button"
-              id="btn-yellow"
-            >
-              <img src={canYellow} alt="yellow food can" />
-            </button>
-            <button
-              onClick={(e) => {
-                onClick(e);
-              }}
-              className="game-button"
-              id="btn-blue"
-            >
-              <img src={canBlue} alt="blue food can" />
-            </button>
-            <button
-              onClick={(e) => {
-                onClick(e);
-              }}
-              className="game-button"
-              id="btn-red"
-            >
-              <img src={canRed} alt="red food can" />
-            </button>
-          </div>
-          <img className="game-character" src={image} alt="cute cat icon" />
-          <div className="timer">
-            <hr className="timer-base" />
-            <hr
-              className="timer-progress"
-              style={{
-                width: `${currentTime / 20}px`,
-                backgroundColor: `${color}`,
-              }}
-            />
+            <p>Choose Food</p>
+            <div className="game-buttons">
+              <button
+                onClick={(e) => {
+                  onClick(e);
+                }}
+                className="game-button"
+                id="btn-yellow"
+              >
+                <img src={canYellow} alt="yellow food can" />
+              </button>
+              <button
+                onClick={(e) => {
+                  onClick(e);
+                }}
+                className="game-button"
+                id="btn-blue"
+              >
+                <img src={canBlue} alt="blue food can" />
+              </button>
+              <button
+                onClick={(e) => {
+                  onClick(e);
+                }}
+                className="game-button"
+                id="btn-red"
+              >
+                <img src={canRed} alt="red food can" />
+              </button>
+            </div>
+            <img className="game-character" src={image} alt="cute cat icon" />
+            <div className="timer">
+              <hr className="timer-base" />
+              <hr
+                className="timer-progress"
+                style={{
+                  width: `${currentTime / 20}px`,
+                  backgroundColor: `${color}`,
+                }}
+              />
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <span className="home-divider-container">
         <hr className="home-divider-small" />
@@ -208,8 +210,8 @@ function CatGame({ onLoad }) {
         </p>
         <p>
           The timer at the bottom will constantly go down. When it runs out,
-          your cat will lose one of their 9 lives! Oh no! It will then fill back
-          up and repeat until you run out of lives.
+          your cat will lose one of their 9 lives! Oh no! The timer will then
+          fill back up and repeat until you run out of lives.
         </p>
         <p>
           Feeding them their favourite food will grant you one score and put 3
@@ -221,7 +223,8 @@ function CatGame({ onLoad }) {
         </p>
         <p>
           Everytime you successfully feed them their favourite food, their
-          favourite and hated will be randomized to a (potentially) new food.
+          favourite and hated foods will be randomized to a (potentially) new
+          food.
         </p>
       </div>
     </main>

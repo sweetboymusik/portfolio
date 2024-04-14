@@ -1,18 +1,9 @@
 import { Link } from "react-router-dom";
 
-import {
-  FaHouse,
-  FaFolderOpen,
-  FaAddressCard,
-  FaEnvelope,
-} from "react-icons/fa6";
-
-import { FaGamepad } from "react-icons/fa6";
-
-function NavLinks({ setNavColor }) {
+function NavLinks() {
   return (
     <div className="nav-links">
-      <Link to="/home" className="link">
+      <Link to="/" className="link">
         <div className="nav-link">
           <span>/home</span>
         </div>

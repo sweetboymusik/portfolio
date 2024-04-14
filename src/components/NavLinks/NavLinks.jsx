@@ -7,40 +7,76 @@ import {
   FaEnvelope,
 } from "react-icons/fa6";
 
-function NavLinks() {
+import { FaGamepad } from "react-icons/fa6";
+
+function NavLinks({ setNavColor }) {
   return (
     <div className="nav-links">
-      <Link to="/home" className="link">
+      <Link
+        onClick={() => {
+          setNavColor("#ddd");
+        }}
+        to="/home"
+        className="link"
+      >
         <div className="nav-link">
-          <FaHouse />
           <span>/home</span>
         </div>
       </Link>
 
       <span>|</span>
 
-      <Link to="/about" className="link">
+      <Link
+        onClick={() => {
+          setNavColor("#D18A8E");
+        }}
+        to="/about"
+        className="link"
+      >
         <div className="nav-link">
-          <FaAddressCard />
           <span>/about</span>
         </div>
       </Link>
 
       <span>|</span>
 
-      <Link to="/projects" className="link">
+      <Link
+        onClick={() => {
+          setNavColor("#7D8BBB");
+        }}
+        to="/projects"
+        className="link"
+      >
         <div className="nav-link">
-          <FaFolderOpen />
           <span>/projects</span>
         </div>
       </Link>
 
       <span>|</span>
 
-      <Link to="/contact" className="link">
+      <Link
+        onClick={() => {
+          setNavColor("#E3C066");
+        }}
+        to="/contact"
+        className="link"
+      >
         <div className="nav-link">
-          <FaEnvelope />
           <span>/contact</span>
+        </div>
+      </Link>
+
+      <span>|</span>
+
+      <Link
+        onClick={() => {
+          setNavColor("#E3C066");
+        }}
+        to="/cat_game"
+        className="link"
+      >
+        <div className="nav-link">
+          <span>/cat_game</span>
         </div>
       </Link>
     </div>

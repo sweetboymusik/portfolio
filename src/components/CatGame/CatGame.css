@@ -1,0 +1,101 @@
+.game-window {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ddd;
+}
+.game-container {
+  width: 600px;
+  height: 500px;
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px;
+  border-radius: 4px;
+}
+
+.game-character {
+  height: 150px;
+  width: 150px;
+}
+
+.game-window hr {
+  height: 16px;
+  border: none;
+  border-radius: 50px;
+}
+
+.game-score {
+  width: 100%;
+  display: flex;
+  gap: 300px;
+}
+
+.timer {
+  display: grid;
+}
+
+.timer-base {
+  background-color: #aaa;
+  position: relative;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  width: 500px;
+}
+
+.timer-progress {
+  position: absolute;
+  background-color: #333;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  width: 200px;
+}
+
+.game-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 320px;
+}
+
+.game-button {
+  border: none;
+  background: none;
+  padding: 8px;
+  border-radius: 4px;
+  transition: transform 0.1s ease;
+}
+
+.game-button img {
+  height: 64px;
+  pointer-events: none;
+}
+
+.game-button:hover {
+  transform: scale(1.2);
+  background-color: #aaa;
+}
+
+.game-button:active {
+  transform: scale(1);
+  background-color: #ccc;
+}
+
+.game-button:disabled {
+  transform: scale(0.8);
+  filter: brightness(0.5);
+}
+
+.score-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  height: 40px;
+  width: 300px;
+}

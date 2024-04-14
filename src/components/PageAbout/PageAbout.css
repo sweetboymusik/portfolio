@@ -1,0 +1,81 @@
+.about-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 32px;
+  gap: 72px;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  font-size: 14pt;
+  width: 920px;
+}
+
+.about-text header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  gap: 32px;
+}
+
+.resume-edu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.resume-work {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.resume-skills {
+  background-color: #ddd;
+  padding: 32px;
+  border-radius: 4px;
+}
+
+.resume-skills ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 32px;
+}
+
+.resume-skills li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 160px;
+}
+
+.about-resume h3 {
+  background-color: #333;
+  color: #eee;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+
+.cats {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cat {
+  height: 280px;
+  width: 280px;
+  object-fit: cover;
+  border-radius: 4px;
+}

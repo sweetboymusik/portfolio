@@ -1,12 +1,19 @@
 nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  background-color: #DDD;
+  justify-content: center;
+  background-color: #7D8BBB;
+
   padding: 0 32px;
   height: 48px;
-  font-size: 16pt;
+  font-size: 14pt;
+}
 
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 920px;
 }
 
 .nav-logo {
@@ -24,9 +31,8 @@ nav {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 24px;
 }
-
 
 .nav-link {
   display: flex;

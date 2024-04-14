@@ -1,5 +1,5 @@
 .card-large {
-  width: 400px;
+  width: 444px;
   height: 420px;
   background-color: #ddd;
   padding: 24px;
@@ -20,7 +20,7 @@
 
 .card-section {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
 }
 
@@ -29,7 +29,6 @@
 }
 
 .card-middle {
-
   display: flex;
   justify-content: center;
   align-items: center;

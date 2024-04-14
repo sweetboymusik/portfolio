@@ -1,6 +1,38 @@
 .project-slider {
-  width: 1000px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.project-prev {
+  border: none;
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.project-next {
+  border: none;
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.project-slider-mask {
+  width: 100%;
+  overflow: hidden;
+}
+
+.project-slider-content {
+  width: 100%;
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.2s ease-in-out;
 }

@@ -1,16 +1,19 @@
+.page-content {
+  height: 100%;
+}
+
 .text-light {
   font-weight: 300;
 }
 
 .text-large {
-  font-size: 72pt;
+  font-size: 48pt;
 }
 
 .text-medium {
-  font-size: 32pt;
+  font-size: 24pt;
 }
 
 .text-small {
-
-  font-size: 16pt;
+  font-size: 14pt;
 }

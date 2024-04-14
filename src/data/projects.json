@@ -1,30 +1,55 @@
 [
   {
     "id": 1,
-    "title": "/project_1",
+    "title": "/wordle_clone",
     "description": "A clone of the popular word game Wordle. Created with vanilla JavaScript.",
     "icon": "FaSomethin",
     "tags": [
-      { "label": "JS", "color": "blue" },
-      { "label": "JS", "color": "red" },
-      { "label": "JS", "color": "red" }
+      { "label": "JS", "color": "#7D8BBB" },
+      { "label": "CSS", "color": "#7D8BBB" },
+      { "label": "HTML", "color": "#7D8BBB" }
     ],
-    "img": "https://images.unsplash.com/photo-1586810165616-94c631fc2f79?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "img": "wordle.png",
     "url": "https://github.com/sweetboymusik/trinkets",
-    "alt": "scabble pieces arranged to say 'THANK YOU'"
+    "alt": "wordle clone screenshot"
+  },
+  {
+    "id": 2,
+    "title": "/chat_nest",
+    "description": "A recreation of Twitter (now X), with basic funtionality. Group project.",
+    "icon": "FaGame",
+    "tags": [
+      { "label": "JS", "color": "#7D8BBB" },
+      { "label": "CSS", "color": "#7D8BBB" },
+      { "label": "HTML", "color": "#7D8BBB" }
+    ],
+    "img": "chat_nest.png",
+    "url": "https://github.com/sweetboymusik/sprint1_feb2024",
+    "alt": "chat_nest screenshot"
   },
   {
     "id": 3,
-    "title": "/project_2",
-    "description": "Another this is a description",
+    "title": "/company_management_system",
+    "description": "Mock company management CLI system.  Group project.",
+    "icon": "FaGame",
+    "tags": [{ "label": "Python", "color": "#7D8BBB" }],
+    "img": "company.png",
+    "url": "https://github.com/sweetboymusik/SD10-Project-2-Robot-Group-3",
+    "alt": "company management system screenshot"
+  },
+
+  {
+    "id": 4,
+    "title": "/drum_machine",
+    "description": "Inspired by the TR-808 drum machine, using JS web audio API.",
     "icon": "FaGame",
     "tags": [
-      { "label": "JS", "color": "blue" },
-      { "label": "JS", "color": "red" },
-      { "label": "JS", "color": "red" }
+      { "label": "JS", "color": "#7D8BBB" },
+      { "label": "CSS", "color": "#7D8BBB" },
+      { "label": "HTML", "color": "#7D8BBB" }
     ],
-    "img": "https://images.unsplash.com/photo-1586810165616-94c631fc2f79?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "url": "https://github.com/sweetboymusik/sprint1_feb2024",
-    "alt": "alt text"
+    "img": "drum_machine.png",
+    "url": "https://github.com/sweetboymusik/trinkets",
+    "alt": "drum machine screenshot"
   }
 ]

@@ -1,7 +1,7 @@
 import "./Button.css";
 function Button({ color, icon, text, path, size }) {
   return (
-    <a href={path} target="_blank">
+    <a href={path} target="_blank" className="btn-link">
       <button
         className="btn"
         style={{

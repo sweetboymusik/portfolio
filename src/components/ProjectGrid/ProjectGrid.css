@@ -1,4 +1,6 @@
 .project-grid {
   display: flex;
-  gap: 16px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 32px;
 }

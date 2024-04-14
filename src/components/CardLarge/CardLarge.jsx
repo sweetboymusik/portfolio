@@ -2,17 +2,21 @@ import "./CardLarge.css";
 import CardTag from "../CardTag/CardTag";
 import Button from "../Button/Button";
 import { FaGithub } from "react-icons/fa6";
+import { MdOutlineWeb } from "react-icons/md";
 
 function CardLarge({ project }) {
   return (
     <div className="card-large">
       <div className="card-section card-top">
         <h3>{project.title}</h3>
-        <span className="card-icon">{project.icon}</span>
       </div>
 
       <div className="card-middle">
-        <img src={project.img} alt={project.alt} className="card-img" />
+        <img
+          src={require(`../../assets/projects/${project.img}`)}
+          alt={project.alt}
+          className="card-img"
+        />
       </div>
 
       <p>{project.description}</p>
@@ -23,8 +27,9 @@ function CardLarge({ project }) {
             <CardTag label={tag.label} color={tag.color} />
           ))}
         </div>
+
         <Button
-          size={{ width: "96px", height: "32px" }}
+          size={{ width: "88px", height: "32px" }}
           icon={<FaGithub />}
           color="#333"
           text="Github"

@@ -159,6 +159,7 @@ function App() {
         </Routes>
       </div>
 
+      <div className="footer-spacer"></div>
       <Footer />
     </Router>
   );

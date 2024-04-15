@@ -41,15 +41,17 @@ function CatGame({ onLoad }) {
       if (e.target.id === wantedFood) {
         setTimesFed(timesFed + 1);
         randomizeFood();
-        setCurrentTime(Math.min(currentTime + 3000, 10000));
         numberChange();
-        changeMessage("Great!", love);
+        changeMessage("Great!");
+        setLives(lives + 1);
       } else if (e.target.id === hatedFood) {
         loseLife(1);
+        randomizeFood();
         numberChange2();
         changeMessage("Ewww!");
       } else {
-        setCurrentTime(Math.min(currentTime + 1000, 10000));
+        randomizeFood();
+        setTimesFed(timesFed + 1);
         changeMessage("Okay...");
       }
 
@@ -61,7 +63,6 @@ function CatGame({ onLoad }) {
 
   function changeMessage(message, image) {
     setMessage(message);
-    setImage(image);
     setTimeout(() => {
       setMessage("");
     }, 600);
@@ -260,17 +261,16 @@ function CatGame({ onLoad }) {
           fill back up and repeat until you run out of lives.
         </p>
         <p>
-          Feeding them their favourite food will grant you one score and put 3
-          more seconds on the timer! Feeding them their hated food will cause
-          them to lose one of their lives. Feeding the other food (neither
-          favourite or hated) will grant you an extra second on the timer, but
-          won't score you a point. Clicking on foods will put that food on
-          'cooldown' for 3 seconds, making you unable to click on them.
+          Feeding them their favourite food will grant you one score one life!
+          Feeding them their hated food will cause them to lose one of their
+          lives. Feeding the other food (neither favourite nor hated) will grant
+          you one score, but won't gain you a life. Clicking on foods will put
+          that food on 'cooldown' for 3 seconds, making you unable to click on
+          them.
         </p>
         <p>
-          Everytime you successfully feed them their favourite food, their
-          favourite and hated foods will be randomized to a (potentially) new
-          food.
+          Every time you feed them, their favourite and hated foods are
+          randomized!
         </p>
       </div>
     </main>

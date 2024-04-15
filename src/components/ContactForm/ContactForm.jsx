@@ -3,7 +3,7 @@ import { FaPaperPlane } from "react-icons/fa6";
 
 function ContactForm() {
   return (
-    <form action="submit" className="contact-form">
+    <form action="" className="contact-form">
       <div className="contact-form-top">
         <div className="contact-form-item">
           <label htmlFor="name">Name</label>
